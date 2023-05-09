@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const animations = () => {
     const fade = () => {
-      if (window.innerWidth <= 500) {
+      console.log(document.documentElement.scrollWidth );
+      if (window.innerWidth <= 700) {
         const fadeInRights = document.querySelectorAll('.animate__fadeInRight');
 
         fadeInRights.forEach(el => {
@@ -33,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
     const delay = () => {
-      if (window.innerWidth <= 500) {
+      if (window.innerWidth <= 700) {
         const elements = document.querySelectorAll('[data-wow-delay]');
         elements.forEach(el => {
           const value = parseFloat(el.getAttribute('data-wow-delay'))
